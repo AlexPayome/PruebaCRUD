@@ -1,0 +1,17 @@
+﻿
+@{
+}
+@model ModelData.ClnUsuariosModel;
+<form method="post">
+    @Html.HiddenFor(Model => Model.ClnId)
+    <br>
+    @Html.TextBoxFor(Model => Model.ClnNombre)
+    <br>
+    @Html.TextBoxFor(Model => Model.ClnApellido)
+    <br>
+    @Html.DropDownListFor(Model => Model.ClnTipo_Documento, (IEnumerable<SelectListItem>)ViewBag.documentos, "-Seleccione-", new { @class = "form-control",required="required" })
+    <br />
+        <input type="submit" value="Enviar" class="btn btn-success" />
+
+</form>
+

@@ -1,0 +1,32 @@
+﻿
+
+<div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <input type="hidden" value="@item.ClnId" >
+                    <th scope="row">@item.ClnId</th>
+                    <td>@item.ClnNombre</td>
+                    <td>@item.ClnApellido</td>
+                    <td>@item.ClnTipo_Documento</td>
+                    <td><a href="~/../Home/Editar/@item.ClnId">
+                        <input type="submit" class="btn btn-primary" value="Editar">
+                    </a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="~/../Home/insertar">
+        <input type="button" class="btn btn-outline-success" value="Insertar" />
+    </a>
+</div>
